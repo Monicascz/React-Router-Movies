@@ -34,7 +34,7 @@ export default function App () {
 
   return (
     <div>
-      {/* <SavedList list={[ ]} /> */}
+      <SavedList list={[ ]} />
     {/* <Link to='/'>Home</Link>
     <Link to='/movies:id'> Movies</Link> */}
     
