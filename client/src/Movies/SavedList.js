@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function SavedList(props) {
+
   return (
     <div className="saved-list">
       <h3>Saved Movies:</h3>
