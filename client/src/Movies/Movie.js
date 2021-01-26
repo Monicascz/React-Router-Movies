@@ -3,14 +3,16 @@ import axios from 'axios';
 import { useRouteMatch, useParams } from 'react-router-dom'
 
 export default function Movie(props) {
-  const {movies} = props
+  
   const [movie, setMovie] = useState();
 
-  const {movieID} = useParams();
-  const id = movies.find((item)=>{
-    return item.id == movieID;
-  }) || {};
-
+  
+  // const id = movies.find((item)=>{
+    //   return item.id == movieID;
+    // }) || {};
+    
+        
+    const { id } = useParams();
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
 
   useEffect(() => {
@@ -20,7 +22,7 @@ export default function Movie(props) {
         // Study this response with a breakpoint or log statements
         // and set the response data as the 'movie' slice of state
         // console.log('Movie', response.data)
-        setMovie(response.data)
+        setMovie(response.data);
       })
       .catch(error => {
         console.error(error);

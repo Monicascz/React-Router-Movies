@@ -5,8 +5,10 @@ import { Route, Link, Switch } from 'react-router-dom'
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList'
 import Movie from './Movies/Movie'
+
+
 export default function App () {
-  const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
+  // const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
@@ -33,14 +35,14 @@ export default function App () {
   return (
     <div>
       {/* <SavedList list={[ ]} /> */}
-    <Link to='/'>Home</Link>
-    <Link to='/movies:id'> Movies</Link>
-
+    {/* <Link to='/'>Home</Link>
+    <Link to='/movies:id'> Movies</Link> */}
+    
     <Switch>
-      <Route to='/movies/:id'>
-        <Movie movies={movieList}/>
+      <Route path='/movies/:id'>
+        <Movie />
       </Route>
-      <Route to='/'>
+      <Route path='/'>
         <MovieList movies={movieList}/>
       </Route>
     </Switch>
